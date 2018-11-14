@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::resource('planos','PlanoController');
 Route::resource('suites','SuiteController');
 Route::resource('casos','CasoController');
+Route::resource('passos','PassoController');
 
 /*
 |--------------------------------------------------------------------------

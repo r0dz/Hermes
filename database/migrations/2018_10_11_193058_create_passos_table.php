@@ -14,10 +14,12 @@ class CreatePassosTable extends Migration
     {
         Schema::create('passos', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('num');
-            $table->string('acao');
+            $table->string('passos');
             $table->string('resultado_esperado');
-            $table->integer('execucao');
+            $table->string('execucao');
+            $table->unsignedInteger('caso_id');
+
+            $table->foreign('caso_id')->references('id')->on('caso_de_testes');
             $table->timestamps();
         });
     }

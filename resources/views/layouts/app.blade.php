@@ -51,6 +51,7 @@
                     <li><a href="{{ url('/planos') }}">Plano de Teste</a></li>
                     <li><a href="{{ url('/suites') }}">Suite de Teste</a></li>
                     <li><a href="{{ url('/casos') }}">Caso de Teste</a></li>
+                    <li><a href="{{ url('/passos') }}">Passo</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
