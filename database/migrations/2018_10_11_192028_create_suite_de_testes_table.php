@@ -16,6 +16,9 @@ class CreateSuiteDeTestesTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('detalhes');
+            $table->unsignedInteger('plano_id');
+
+            $table->foreign('plano_id')->references('id')->on('plano_de_testes');
             $table->timestamps();
         });
     }

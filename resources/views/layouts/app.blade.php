@@ -49,6 +49,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ url('/planos') }}">Plano de Teste</a></li>
+                    <li><a href="{{ url('/suites') }}">Suite de Teste</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
