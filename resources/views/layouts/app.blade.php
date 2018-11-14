@@ -48,10 +48,12 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
-                    <li><a href="{{ url('/planos') }}">Plano de Teste</a></li>
-                    <li><a href="{{ url('/suites') }}">Suite de Teste</a></li>
-                    <li><a href="{{ url('/casos') }}">Caso de Teste</a></li>
-                    <li><a href="{{ url('/passos') }}">Passo</a></li>
+                    @unless (Auth::guest())
+                      <li><a href="{{ url('/planos') }}">Plano de Teste</a></li>
+                      <li><a href="{{ url('/suites') }}">Suite de Teste</a></li>
+                      <li><a href="{{ url('/casos') }}">Caso de Teste</a></li>
+                      <li><a href="{{ url('/passos') }}">Passo</a></li>
+                    @endunless
                 </ul>
 
                 <!-- Right Side Of Navbar -->

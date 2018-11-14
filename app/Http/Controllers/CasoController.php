@@ -9,6 +9,11 @@ use App\Http\Controllers\Controller;
 
 class CasoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create()
     {
         $suites = \App\SuiteDeTeste::all();

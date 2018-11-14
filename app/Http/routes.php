@@ -15,11 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('planos','PlanoController');
-Route::resource('suites','SuiteController');
-Route::resource('casos','CasoController');
-Route::resource('passos','PassoController');
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -37,6 +32,11 @@ Route::group(['middleware' => ['web']], function () {
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
+  
+    Route::resource('planos','PlanoController');
+    Route::resource('suites','SuiteController');
+    Route::resource('casos','CasoController');
+    Route::resource('passos','PassoController');
 
     Route::get('/home', 'HomeController@index');
 });

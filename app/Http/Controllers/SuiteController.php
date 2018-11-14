@@ -9,6 +9,11 @@ use App\Http\Controllers\Controller;
 
 class SuiteController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create()
     {
         $planos = \App\PlanoDeTeste::all();
