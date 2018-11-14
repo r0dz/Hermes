@@ -17,10 +17,13 @@ class CreateCasoDeTestesTable extends Migration
             $table->string('titulo');
             $table->string('objetivo');
             $table->string('pre_condicoes');
-            $table->integer('status');
-            $table->integer('prioridade');
-            $table->integer('tipo_execucao');
-            $table->integer('tempo_estimado');
+            $table->string('status');
+            $table->string('prioridade');
+            $table->string('tipo_execucao');
+            $table->string('tempo_estimado');
+            $table->unsignedInteger('suite_id');
+
+            $table->foreign('suite_id')->references('id')->on('suite_de_testes');
             
             $table->timestamps();
         });
