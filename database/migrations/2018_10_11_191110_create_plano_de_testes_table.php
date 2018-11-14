@@ -18,12 +18,6 @@ class CreatePlanoDeTestesTable extends Migration
             $table->string('descricao');
             $table->boolean('publico');
             $table->boolean('ativo');
-            $table->integer('id_documento');
-            $table->string('titulo');
-            $table->integer('tipo');
-            $table->integer('status');
-            $table->integer('numero_caso_teste');
-            $table->binary('arquivos_anexados');
             $table->timestamps();
         });
     }
