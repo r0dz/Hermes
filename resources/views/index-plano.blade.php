@@ -32,6 +32,7 @@
                         <td><a href="{{action('PlanoController@edit', $plano['id'])}}" class="btn btn-warning">Editar</a></td>
                         <td>
                           <form action="{{action('PlanoController@destroy', $plano['id'])}}" method="post">
+                            {!! csrf_field() !!}
                             <input name="_method" type="hidden" value="DELETE">
                             <button class="btn btn-danger" type="submit">Deletar</button>
                           </form>
